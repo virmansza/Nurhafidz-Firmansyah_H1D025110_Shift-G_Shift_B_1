@@ -1,0 +1,3 @@
+interface Konstruksi {
+    void claimResource();
+}
