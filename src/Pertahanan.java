@@ -1,4 +1,3 @@
-package PACKAGE_NAME;
-
-public class Pertahanan {
+interface Pertahanan {
+    void serangMusuh();
 }
