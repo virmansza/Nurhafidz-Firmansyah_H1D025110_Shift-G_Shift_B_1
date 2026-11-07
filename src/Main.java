@@ -1,13 +1,24 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+public class Main {
+    public static void main(String[] args){
+        System.out.println("=== WELCOME TO CLASH OF CLANS===\n");
+        TownHall TH = new TownHall("TH-1", "TownHall", 1);
+        StrukturPertahanan cannon = new StrukturPertahanan("DEF-1", "Cannon",2, 300 );
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+        TH.tampilkanInfo();
+        cannon.tampilkanInfo();
+        System.out.println("-----------------------------");
+
+        TH.upBangunan(600000000,60000000);
+        TH.tampilkanInfo();
+
+
+        cannon.upBangunan(10000000,6000000);
+        cannon.claimResource();
+
+        System.out.println("-----------------------------");
+
+        Pertahanan senjatadesa = new StrukturPertahanan("DEF-02", "Mortar", 1, 150);
+        senjatadesa.serangMusuh();
+        cannon.serangMusuh();
+    }
 }
